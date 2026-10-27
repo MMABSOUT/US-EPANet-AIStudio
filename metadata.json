@@ -1,0 +1,9 @@
+{
+  "name": "EPANET Web",
+  "description": "Modern web interface and hydraulic & water quality simulation engine for EPANET water distribution systems.",
+  "version": "1.0.0",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
