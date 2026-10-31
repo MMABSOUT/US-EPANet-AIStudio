@@ -76,7 +76,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('select')}
           title="Select / Move Elements (V)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Select or move elements (V)"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
             toolMode === 'select'
               ? 'bg-cyan-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-white hover:bg-slate-800'
@@ -88,7 +89,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('pan')}
           title="Pan Map (H)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Pan map (H)"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
             toolMode === 'pan'
               ? 'bg-cyan-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-white hover:bg-slate-800'
@@ -103,7 +105,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_junction')}
           title="Add Junction (Click on map to place)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add junction"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 ${
             toolMode === 'add_junction'
               ? 'bg-emerald-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-emerald-400 hover:bg-slate-800'
@@ -115,7 +118,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_reservoir')}
           title="Add Reservoir (Water Source)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add reservoir (water source)"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${
             toolMode === 'add_reservoir'
               ? 'bg-blue-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-blue-400 hover:bg-slate-800'
@@ -127,7 +131,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_tank')}
           title="Add Elevated Storage Tank"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add elevated storage tank"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-amber-400 ${
             toolMode === 'add_tank'
               ? 'bg-amber-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-amber-400 hover:bg-slate-800'
@@ -142,7 +147,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_pipe')}
           title="Add Pipe (Click start node, then click end node)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add pipe"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 ${
             toolMode === 'add_pipe'
               ? 'bg-cyan-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800'
@@ -154,7 +160,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_pump')}
           title="Add Booster Pump (Click start node, then end node)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add booster pump"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-rose-400 ${
             toolMode === 'add_pump'
               ? 'bg-rose-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-rose-400 hover:bg-slate-800'
@@ -166,7 +173,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('add_valve')}
           title="Add Control Valve (PRV/PSV/FCV)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Add control valve"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-purple-400 ${
             toolMode === 'add_valve'
               ? 'bg-purple-500 text-slate-950 font-semibold shadow'
               : 'text-slate-300 hover:text-purple-400 hover:bg-slate-800'
@@ -180,7 +188,8 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
         <button
           onClick={() => onSetToolMode('delete')}
           title="Delete Element (Click element to remove)"
-          className={`p-2 rounded-md transition-all ${
+          aria-label="Delete element mode"
+          className={`p-2 rounded-md transition-all outline-none focus-visible:ring-2 focus-visible:ring-red-400 ${
             toolMode === 'delete'
               ? 'bg-red-500 text-white font-semibold shadow'
               : 'text-slate-300 hover:text-red-400 hover:bg-slate-800'
@@ -315,21 +324,24 @@ export const MapViewerToolbar: React.FC<MapViewerToolbarProps> = ({
             <button
               onClick={onZoomIn}
               title="Zoom In (+)"
-              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300"
+              aria-label="Zoom in (+)"
+              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
             >
               <ZoomIn className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={onZoomOut}
               title="Zoom Out (-)"
-              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300"
+              aria-label="Zoom out (-)"
+              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
             >
               <ZoomOut className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={onFitExtent}
               title="Fit Full Network Extent"
-              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300"
+              aria-label="Fit full network extent"
+              className="p-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
             >
               <Maximize2 className="w-3.5 h-3.5" />
             </button>
