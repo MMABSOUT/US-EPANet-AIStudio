@@ -3,3 +3,5 @@ lib/
 *.app/
 *.lps
 *.res
+node_modules/
+dist/
